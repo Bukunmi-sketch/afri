@@ -1,0 +1,15 @@
+.dropdown-content,
+.dropdown-attendance,
+.dropdown-campreg,
+.dropdown-members,
+.dropdown-exams{
+    display: none;
+    transition:1s;
+    background-color:#333;
+}
+
+
+.show {
+    display:block;
+    transition:1s;
+}
