@@ -1,19 +1,21 @@
   <!------------------------LEFT ----------------- ---------------->
   <div class="left"> 
     <!------------------------for keeping profile and remove button for sidenav----------------- ---------------->
-   <div class="image-removebox">
-       
-        <a href="mypage.php" class="profile">
-             <div class="profile-photo">                               
-                <img src="#" alt=""  class="profile-photo">   
-             </div>
-             <div class="handle">
-                <h4></h4>
-             </div>                         
-         </a>
+    <div class="image-removebox">
+                          
+      <a href="mypage.php" class="profile">
+           <div class="profile-photo">                               
+              <img src="" alt=""  class="profile-photo">   
+           </div>
+           <div class="handle">
+              <h4> {{ __("admin")}}</h4>
+           </div>                         
+       </a>
 
-         <a href="Javascript:void(0)"  onclick="closenv()" class="remove-bar"> <i class="fa fa-remove remove"></i> </a>
- </div>
+       <a href="Javascript:void(0)"  onclick="closenv()" class="remove-bar"> <i class="fa fa-remove remove"></i> </a>
+</div>
+
+
 <!---------------------end for keeping profile and remove button for sidenav----------------- ---------------->     
     
     

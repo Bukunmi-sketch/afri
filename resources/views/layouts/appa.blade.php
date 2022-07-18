@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'dashboard afrimama') }}</title>
+    <title>{{ __('dashboard afrimama') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,16 +21,21 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/left.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dropdown.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/form.css') }}" rel="stylesheet">
+
+   <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  -->
     @include('layouts.meta')
 </head>
 <body>
     @include('layouts.nav')
     <main> 
         <div class="container">
-        @include('layouts.left')    
-        @yield('content')
-    </div>
+            @include('layouts.left')    
+            @yield('content')
+        </div>
    </main>    
-    
+       <!-- JavaScripts 
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
 </body>
 </html>
