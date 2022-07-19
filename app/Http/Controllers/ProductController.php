@@ -21,7 +21,11 @@ class ProductController extends Controller
     {
         $this->validate($request, [
             "name"=>"required|max:255|string",
-            "stask"=>"required|max:255|string",
+            "product_name"=>"required|max:255|string",
+            "product_description"=>"required|max:255|string",
+            "product_price"=>"required|max:255|integer",
+            "product_imagea"=>"required|max:255|integer",
+            "product_imageb"=>"required|max:255|integer",
         ]);
 
         Product::create([

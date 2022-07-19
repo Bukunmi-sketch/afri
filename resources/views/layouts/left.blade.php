@@ -82,7 +82,7 @@
          </div>
            -->   
          <a href="javascript:void(0)" onclick="exams()" class="menu-item">  
-            <h3>Examinations</h3>
+            <h3>Contact Customers</h3>
         </a>
 
         <div id="exams" class="dropdown-exams">
@@ -99,12 +99,12 @@
        
         <a href="events.php" onclick="darkmode()" class="menu-item"> 
        <!--    <span><i class="material-icons">color_lens</i></span> -->
-            <h3>Upcoming Events</h3>
+            <h3>Reports & Complaints</h3>
         </a>
 
         <a href="edit.php" class="menu-item"> 
        <!--    <span><i class="material-icons">settings</i></span> -->
-            <h3>Edit Account</h3>
+            <h3>Edit Admin Account</h3>
         </a>
        
         <a href="home.php?logout=true" class="menu-item"> 
