@@ -24,12 +24,16 @@ class ProductController extends Controller
             "product_name"=>"required|max:255|string",
             "product_description"=>"required|max:255|string",
             "product_price"=>"required|max:255|integer",
-            "product_imagea"=>"required|max:255|integer",
-            "product_imageb"=>"required|max:255|integer",
+            "product_imagea"=>"max:255|integer",
+            "product_available"=>"max:255|integer",
         ]);
 
-        Product::create([
-
+        $request->user()->products()->create([
+            'product_name'=>$request->product_name,
+            'description'=>$request->product_description,
+            'price'=>$request->product_price,
+            'product_picture'=>$request->product_imagea,
+            'available'=>$request->product_available,
         ]);
     }
 

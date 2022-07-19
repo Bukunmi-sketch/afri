@@ -31,13 +31,22 @@
                     <i class="fa fa-camera" id="camera"></i>
                 </div>
     
-                <div id="upload" >
+             <!-- <div id="upload" >
                     <img src="" onClick="trigger()" id="profileDisplay" > 
                     <input type="file" name="product_imageb" onchange="displayImage(this)"   id="capture"  style="display:none;">
                     <i class="fa fa-camera" id="camera"></i>
-                </div>
+                </div>-->
     
             </div>
+
+            <div class="inputbox-details">
+                <select name="product_avalable">
+                    <option value="" disabled selected>Product's availability</option>
+                    <option value="available">Availble</option>
+                    <option value="unavailable">Unavailable</option>
+    
+           </select>
+            </div> 
            
             <div class="button-details">
                <button class="submit" name="login">Add</button>
