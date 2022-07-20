@@ -109,20 +109,21 @@ img{
 
 nav{
     width: 100%;
-    background-color: #093963;
+    background-color: var(--color-white);
+   /* background-color: #093963; */
     padding:0.9rem 0 ;
     position: fixed;
     top: 0;
     z-index: 10;
     border: 1px solid transparent;
-    color: white;
+    color: black;
     font-family: 'Prompt', sans-serif;
 }
 
 nav .container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 
@@ -182,6 +183,12 @@ nav .create{
      display: flex;
      align-items: center;
      gap: 2em;
+}
+
+nav .create .logout{
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
 }
 
 

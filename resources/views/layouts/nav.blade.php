@@ -7,7 +7,7 @@
          <div class="create">
                 @auth
                 <a href="{{ url('/logout') }}" class="logout">logout</a>
-            @else
+              @else
                 <a href="{{ route('login') }}" class="login">Log in</a>
       
                 @if (Route::has('register'))

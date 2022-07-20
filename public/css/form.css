@@ -219,7 +219,7 @@ input[type=email],input[type=password],input[type=text],input[type=number],input
 
 
     .submit{
-    padding:2px 30px;
+    padding:10px 30px;
    
     position:relative;
     border-radius:4px;

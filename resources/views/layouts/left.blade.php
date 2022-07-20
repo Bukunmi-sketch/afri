@@ -8,7 +8,8 @@
               <img src="" alt=""  class="profile-photo">   
            </div>
            <div class="handle">
-              <h4> {{ __("admin")}}</h4>
+              <h4> {{ auth::user() }}</h4>
+              <h4> {{ auth::user() }}</h4>
            </div>                         
        </a>
 
