@@ -8,8 +8,8 @@
               <img src="" alt=""  class="profile-photo">   
            </div>
            <div class="handle">
-              <h4> {{ auth::user() }}</h4>
-              <h4> {{ auth::user() }}</h4>
+              <h4> {{ auth::user()->name }}</h4>
+              
            </div>                         
        </a>
 

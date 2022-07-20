@@ -17,7 +17,7 @@ Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'i
 Route::post('/register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
 */
 
-Route::post('/logout', [App\Http\Controllers\AuthLogoutController::class, 'store'])->name('logout');
+Route::post('/logout', [App\Http\Controllers\Auth\LogoutController::class, 'store'])->name('logout');
 
 Route::get('/create', [App\Http\Controllers\ProductController::class, 'index'])->name('create');
 Route::post('/create', [App\Http\Controllers\ProductController::class, 'store'])->name('create');

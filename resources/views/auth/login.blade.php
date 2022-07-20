@@ -81,7 +81,7 @@
             </div>
     
             <div class="create">
-            <a href ="signup.php " class="createbut"> Create New  Account </a>
+            <a href =" {{ route('register') }} " class="createbut"> Create New  Account </a>
           </div>
     
         </form>  

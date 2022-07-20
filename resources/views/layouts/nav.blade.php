@@ -6,7 +6,10 @@
          
          <div class="create">
                 @auth
-                <a href="{{ url('/logout') }}" class="logout">logout</a>
+                <form action="{{ route('logout') }}" method="POST">
+                     @csrf
+                    <button class="logout">logout</button>
+                </form>
               @else
                 <a href="{{ route('login') }}" class="login">Log in</a>
       

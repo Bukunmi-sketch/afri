@@ -52,8 +52,8 @@ html,body{
     height:50px;
     padding:8px;
     box-sizing:border-box;
-    border: 0;
-    border-bottom:1px solid black;
+    border-radius:5px;
+    border:1px solid #cecece;
     font-size:1.1em;
     justify-content:center;
     text-align:left;
@@ -196,11 +196,10 @@ html,body{
     max-width:400px;
     display:flex;
     flex-direction:column ;
-    box-shadow:0 0 12px #cecece;
     border:1px solid white;
     background-color:#fff;
     padding:0 0 50px 0;
-    border-radius:10px;
+    border-radius:5px;
    
     }
     
