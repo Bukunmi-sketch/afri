@@ -6,12 +6,12 @@
          
          <div class="create">
                 @auth
-                <a href="{{ url('/logout') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
+                <a href="{{ url('/logout') }}" class="logout">logout</a>
             @else
-                <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                <a href="{{ route('login') }}" class="login">Log in</a>
       
                 @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                    <a href="{{ route('register') }}" class="register">Register</a>
                 @endif
             @endauth
          </div>

@@ -23,7 +23,7 @@
      <div class="sidebar">
                         
 
-        <a href="{{ route('register') }}" class="menu-item active"> 
+        <a href="{{ route('dashboard') }}" class="menu-item active"> 
             <h3>Dashboard</h3>
         </a>
 
