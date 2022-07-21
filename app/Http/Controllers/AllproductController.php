@@ -13,6 +13,9 @@ class AllproductController extends Controller
         $this->middleware('auth');
     }
     public function index(Request $request){
-        return view("products.items", ['itemname'=>'macbook']);
+        $list=['macbook','semo','eba','wheat'];
+        $fuck='let" enjoy ourselves';
+        return view("products.items", compact('list', 'fuck'));
+      //  ['itemname'=> $list ]);
     }
 }

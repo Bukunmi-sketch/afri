@@ -40,15 +40,16 @@
          <div class="error"><p></p></div><br>
             
             <div class="email-details">
-                 <input type="email" name="email" placeholder="{{ __('Email Address') }}" autofocus required autocomplete="email" >
-            </div>
+                 <input type="email" name="email" placeholder="{{ __('Email Address') }}" autofocus style="@error('email') border:1px solid red  @enderror" required autocomplete="email" >
 
-            @error('email')
+                 @error('email')
                  <span class="invalid-feedback" role="alert">
                      <strong>{{ $message }}</strong>
                  </span>
-            @enderror
-            
+                 @enderror           
+            </div>
+
+           
             <div class="password-details">
                 <span  id="show" onclick="check()"><i class="fa fa-eye"></i></span>
                 <input type="password" id="pass" name="password" placeholder="{{ __('Password') }}"     required autocomplete="current-password">
