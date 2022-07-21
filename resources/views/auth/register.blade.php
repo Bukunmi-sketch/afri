@@ -19,18 +19,18 @@
     
     <!-- Styles -->
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">  -->
     @include('layouts.meta')
 </head>
 <body>
 <div class="container">
-        
+      
     <div class="sub-container">
     
     <div class="logobox">
             <div class="sub-logo">
-            <p class="logoo">Afrimama</p>
+            <p class="logoo">Afrimama Register</p>
             </div>
     </div>
     
@@ -47,40 +47,38 @@
                     </span>
                 @enderror
             </div>
-            
+
+            <div class="email-details">
+                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+            </div>
+
             <div class="password-details">
                 <span  id="show" onclick="check()"><i class="fa fa-eye"></i></span>
-                <input type="password" id="pass" name="password" placeholder="{{ __('Password') }}"     required autocomplete="current-password">
+                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
 
-            @error('password')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-            
-            <button class="submit" name="login">{{ __('Login') }}</button>
-            
-            <div class="forgetbox">   
-                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                @endif
+            <div class="password-details">
+                <span  id="show" onclick="check()"><i class="fa fa-eye"></i></span>
+                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
             </div>
-            
-            <div class="before">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                    <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
-                </div>
-            </div>
-    
+            <button class="submit" name="login"> {{ __('Register') }}</button>
+            
+           
             <div class="create">
-            <a href =" {{ route('register') }} " class="createbut"> Create New  Account </a>
+                <a href =" {{ route('login') }} " class="createbut"> Already have an Account </a>
           </div>
     
         </form>  

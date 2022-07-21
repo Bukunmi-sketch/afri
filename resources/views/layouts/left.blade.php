@@ -9,7 +9,7 @@
            </div>
            <div class="handle">
               <h4> {{ auth::user()->name }}</h4>
-              
+              <h6> {{ auth()->user()->email }}</h6>
            </div>                         
        </a>
 
@@ -24,8 +24,8 @@
      <div class="sidebar">
                         
 
-        <a href="{{ route('dashboard') }}" class="menu-item active"> 
-            <h3>Dashboard</h3>
+        <a href="{{ route('products') }}" class="menu-item active"> 
+            <h3>All products</h3>
         </a>
 
         <a href="{{ route('create')}}" onclick="myFunction()" class="menu-item"> 
