@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->string('product_name');
             $table->text("description");
+            $table->string("category");
             $table->integer("price");
             $table->string('product_picture')->nullable();
             $table->string("available");

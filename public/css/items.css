@@ -1,0 +1,169 @@
+.middle{
+    border: 1px solid transparent;
+}
+
+
+.userbox{
+
+    margin-top:10px;
+    display:inline-block;
+    padding:10px;
+    background-color:white;
+    border-bottom:1px solid transparent;
+    border-top:1px solid transparent;
+    white-space:wrap;
+    width:100%;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    position: relative;
+        }
+        
+.each-user{
+   
+    margin:10px 0 0 10px;
+    border:1px solid #cecece;
+    height:200px;
+    width:15%;
+    display:inline-block;
+    border-radius:4px;
+    background-color:white;
+    position:relative;
+          }
+
+
+.productname{
+ 
+  font-size:14px;
+  text-align: center;
+  align-items: center;
+  color:black;
+  word-spacing:2px;
+  font-weight:bold;
+  }
+          
+#followers-count{
+color:grey;
+font-size:0.8em; 
+position: relative;
+width: 100%;
+text-align: center;
+font-weight:bold;
+margin: 0 0 0 10px;
+font-family: "poppins",sans-serif;
+}
+    
+    
+.profileview{
+color:black;
+font-size: 0.8em;
+bottom:40px;
+width: 100%;
+text-align: center;
+font-weight:light;
+margin: 0 0 0 10px;
+letter-spacing:-0.4px;
+}
+
+
+.follow-unfollow{
+    border:1px solid transparent;
+    width:70%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+ }
+ 
+.justbtn{
+    color:var(--color-white);    
+    text-align:center;
+    text-decoration: none;
+    background-color:black;
+    padding:5px 10px;
+    background-color:#0E6EB8;
+    border-radius:3px;
+    border:1px solid transparent;   
+    font-family:'poppins',sans-serif;   
+    font-weight:bold;  
+    }
+  
+.deletebtn{
+    color:var(--color-white);
+    text-align:center;
+    text-decoration: none;
+    background-color:#B03060;
+    padding:5px 10px;
+    border-radius:3px;
+    border:1px solid transparent;  
+    font-family:'poppins',sans-serif;
+    font-weight:bold;
+    }  
+  
+
+    
+  
+
+ .image{
+ width:100%;
+ height:100px;
+ border-radius:5px 5px 0 0;
+ border-bottom:1px solid #cecece;
+ }
+
+
+
+
+ 
+.empty{
+    padding:10px 10px;
+    font-weight:bold;
+    font-size:0.9em;
+    font-family:'lato',sans-serif;
+    text-decoration:none;
+    border-radius:20px;
+    border:1px solid #cecece;
+    margin:20px 0 0 5px;
+    
+    }
+    .emptyname{
+    color:#005088;
+    font-size:0.85em;
+     }
+    
+    .checkmore {
+    background-color:black;
+    border-radius:20px;
+    border:1px solid white;
+    width:30%;
+    height:40px;
+    margin:0 0 0 80px;
+    color:white;
+    }
+    
+    .checkmore p{
+    color:white;
+    font-weight:bold;
+    font-size:0.9em;
+    font-family:'lato',sans-serif;
+    text-decoration:none;
+    text-align:center;
+    align-items:center;
+    margin:10px 0 0 0;
+    }
+    
+     a{
+    text-decoration:none;	
+    }
+
+    .showw{
+        background-color: var(--color-white);
+        margin:30px 0 0 150px;
+        position:absolute;
+        padding:5px 20px;
+        border-radius:20px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border:1px solid transparent;
+
+    }

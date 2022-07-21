@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Repositories;
+
+use App\Models\Product;
+use App\Models\User;
+use Illuminate\Support\Facades\DB;
+
+class ProductRepository{
+    /**
+     * Get all of the tasks for a given user.
+     *
+     * @param  User  $user
+     * @return Collection
+     */
+    public function forUser(User $user)
+    {
+        return Product::get();
+      //  return DB::table('products')->orderBy('created_at', 'asc')->get();
+    }
+}
+
+
+
+
+
+?>

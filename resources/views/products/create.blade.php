@@ -11,7 +11,8 @@
            
            <form action="/create" method="POST" enctype="multipart/form-data">
               {{ csrf_field() }}
-
+              @include('common.errors')
+            
             <div class="inputbox-details">
                 <input type="text" id="passa" name="product_name" style="@error('product_name') border:1px solid red  @enderror" placeholder="Product name" value=" {{old("product_name")}} " autofocus >
 
@@ -57,6 +58,21 @@
     
             </div>
             -->
+
+            <div class="inputbox-details">
+                <select name="category">
+                    <option value="" disabled selected>Product Category</option>
+                    <option value="cereals">Cereals</option>
+                    <option value="Tubers">Tubers</option>
+                    <option value="fruits">fruits</option>
+                    <option value="Cottons">Cottons</option>
+                </select>
+                @error('product_avalable')
+                 <span class="invalid-feedback" role="alert">
+                     <strong>{{ $message }}</strong>
+                 </span>
+                 @enderror   
+            </div> 
 
             <div class="inputbox-details">
                 <select name="product_available">

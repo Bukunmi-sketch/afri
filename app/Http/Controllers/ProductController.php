@@ -25,7 +25,8 @@ class ProductController extends Controller
             "product_name"=>"required|max:255|string",
             "product_description"=>"required|max:255|string",
             "product_price"=>"required|integer",
-            "product_available"=>"required|integer",
+            "category"=>"required|string",
+            "product_available"=>"required|string",
         ]);
 
         
@@ -34,10 +35,14 @@ class ProductController extends Controller
             'product_name'=>$request->product_name,
             'description'=>$request->product_description,
             'price'=>$request->product_price,
-            'available'=>$request->product_available
+            'category'=>$request->category,
+            'available'=>$request->product_available,
         ]);
+        
+        //->back()->with('status','created a product succesfully');
+        
 
-        return redirect('/dashboard');
+        return redirect()->route('create');
     }
 
 }
