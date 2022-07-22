@@ -15,7 +15,7 @@
                            <div class="productname"> {{$item->product_name }} </div>
                            <div id="followers-count" class="followers-count {{$item->id}} " > 2 sales </div>
                            <div id="followers-count"> {{$item->category}} </div>
-                           <a href="details/{{$item->id}}  "> <div class="profileview">view details</div></a>
+                           <a href="#"> <div class="profileview">view details</div></a>
 
                      <div class="follow-unfollow">        
                              <button type="submit" class="justbtn" > {{ $item->available}} </button>     

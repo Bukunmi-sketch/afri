@@ -28,7 +28,7 @@ Route::get('/edit', [App\Http\Controllers\ProductController::class, 'index'])->n
 Route::post('/edit', [App\Http\Controllers\ProductController::class, 'store'])->name('edit');
 
 Route::get('/categories', [App\Http\Controllers\ProductController::class, 'index'])->name('categories');
-Route::post('/categories', [App\Http\Controllers\ProductController::class, 'store'])->name('categories');
+Route::post('/categories', [App\Http\Controllers\ProductController::class, 'store']);
 
 Route::get('/delete', [App\Http\Controllers\ProductController::class, 'index'])->name('delete');
 Route::post('/delete', [App\Http\Controllers\ProductController::class, 'store'])->name('delete');

@@ -4,11 +4,11 @@ namespace App\Repositories;
 
 use App\Models\Product;
 use App\Models\User;
-use Illuminate\Support\Facades\DB;
+//use Illuminate\Support\Facades\DB;
 
 class ProductRepository{
     /**
-     * Get all of the tasks for a given user.
+     * Get all of the products .
      *
      * @param  User  $user
      * @return Collection

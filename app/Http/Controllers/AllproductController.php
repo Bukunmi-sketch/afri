@@ -4,24 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use App\Repositories\ProductRepository;
+//use App\Repositories\ProductRepository;
 
 class AllproductController extends Controller
 {
-    protected $products;
+   // protected $products;
 
-    public function __construct(ProductRepository $products){
+    public function __construct(){
         $this->middleware('auth');
 
-        $this->products=$products;
+     //   $this->products=$products;
     }
 
     public function index(Request $request){
-       // $list=['macbook','semo','eba','wheat']; $fuck='let" enjoy ourselves';
-        //$list=Product::get();
-       // $list=DB::table('products')->get();
-        return view("products.items", ['list'=> $this->products->forUser($request->user()) ]) ;
-      // compact('list', 'fuck')
+         $list=Product::get();
+      //  $list=DB::table('products')->get();
+        return view("products.items", ['list'=> $list] ) ;
     }
 }
