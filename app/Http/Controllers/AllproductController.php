@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class AllproductController extends Controller
 {
-   // protected $products;
+    protected $products;
 
     public function __construct(){
         $this->middleware('auth');
@@ -19,8 +19,8 @@ class AllproductController extends Controller
     }
 
     public function index(Request $request){
-         $list=Product::get();
-      //  $list=DB::table('products')->get();
-        return view("products.items", ['list'=> $list] ) ;
+         //$list=Product::get();
+        $list=DB::table('products')->get();
+        return view("products.items", ['list'=> $list ] ) ;
     }
 }

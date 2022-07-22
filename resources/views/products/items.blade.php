@@ -21,7 +21,10 @@
                              <button type="submit" class="justbtn" > {{ $item->available}} </button>     
                       </div>
                       <div id="followers-count">created: {{$item->created_at}} </div> 
-                      <div class="follow-unfollow">        
+                      <div class="follow-unfollow">     
+                        <form action="/delete/{{ $item->id }}" method="POST">
+                           {{ csrf_field() }}
+                           {{ method_field('DELETE')}}
                         <button type="submit" class="deletebtn" > Delete </button>     
                  </div>                                                
                  </div>

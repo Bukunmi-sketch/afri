@@ -15,7 +15,7 @@ class ProductRepository{
      */
     public function forUser(User $user)
     {
-        return Product::get();
+       // return Product::get();
       //  return DB::table('products')->orderBy('created_at', 'asc')->get();
     }
 }

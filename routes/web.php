@@ -19,7 +19,7 @@ Route::post('/register', [App\Http\Controllers\RegisterController::class, 'index
 
 //Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, ''])->name('logout');
 
-Route::get('/products', [App\Http\Controllers\AllproductController::class, 'index'])->name('products');
+Route::get('/products', [App\Http\Controllers\productController::class, 'getproducts'])->name('products');
 
 Route::get('/create', [App\Http\Controllers\ProductController::class, 'index'])->name('create');
 Route::post('/create', [App\Http\Controllers\ProductController::class, 'store'])->name('create');
@@ -31,7 +31,7 @@ Route::get('/categories', [App\Http\Controllers\ProductController::class, 'index
 Route::post('/categories', [App\Http\Controllers\ProductController::class, 'store']);
 
 Route::get('/delete', [App\Http\Controllers\ProductController::class, 'index'])->name('delete');
-Route::post('/delete', [App\Http\Controllers\ProductController::class, 'store'])->name('delete');
+Route::post('/delete/{productid}', [App\Http\Controllers\ProductController::class, 'destroy']);
 
 Route::get('/customers', [App\Http\Controllers\ProductController::class, 'index'])->name('customers');
 Route::post('/customers', [App\Http\Controllers\ProductController::class, 'store'])->name('customers');

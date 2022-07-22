@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -27,9 +28,8 @@ class ProductController extends Controller
             "product_price"=>"required|integer",
             "category"=>"required|string",
             "product_available"=>"required|string",
-        ]);
+        ]);  
 
-        
         //Product::create([]);
         $request->user()->products()->create([
             'product_name'=>$request->product_name,
@@ -40,9 +40,17 @@ class ProductController extends Controller
         ]);
         
         //->back()->with('status','created a product succesfully');
-        
-
         return redirect()->route('create');
+    }
+
+    public function getproducts(Request $request){
+        //$list=Product::get();
+       $list=DB::table('products')->get();
+       return view("products.items", ['list'=> $list ] ) ;
+    }
+
+    public function destroy(Request $request, Product $product){
+
     }
 
 }
