@@ -5,8 +5,11 @@
 @section('content')
 
    <div class="middle">
+      <div class="follow-unfollow">          
+         <button type="submit" class="justbtn" ><a href={{ route('create') }}> Create product</a> </button>     
+      </div>
         @if (count($list) > 0 )
-   
+          
               <div class="userbox">
                <!---------------------each users -----------------> 
                <div class="userContainer">
@@ -16,18 +19,23 @@
                            <div id="followers-count" class="followers-count {{$item->id}} " > 2 sales </div>
                            <div id="followers-count"> {{$item->category}} </div>
                            <a href="#"> <div class="profileview">view details</div></a>
-
-                     <div class="follow-unfollow">        
-                             <button type="submit" class="justbtn" > {{ $item->available}} </button>     
-                      </div>
+                           <a href="#"> <div class="profileview"> {{ $item->available}}</div></a>   
+                     
                       <div id="followers-count">created: {{$item->created_at}} </div> 
+
                       <div class="follow-unfollow">     
                         <form action="/delete/{{ $item->id }}" method="POST">
                            {{ csrf_field() }}
                            {{ method_field('DELETE')}}
-                        <button type="submit" class="deletebtn" > Delete </button>     
+                           <button type="submit" class="deletebtn" > Delete </button> 
+                         </form>                           
+                        </div>
+
+                        <div class="follow-unfollow">          
+                              <button type="submit" class="justbtn" > update </button>     
+                        </div>
                  </div>                                                
-                 </div>
+                
                  @endforeach
                   <!---------------------each of each users ----------------->  
                 </div>  

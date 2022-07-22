@@ -40,7 +40,7 @@ class ProductController extends Controller
         ]);
         
         //->back()->with('status','created a product succesfully');
-        return redirect()->route('create');
+        return redirect()->route('products');
     }
 
     public function getproducts(Request $request){
@@ -50,7 +50,10 @@ class ProductController extends Controller
     }
 
     public function destroy(Request $request, Product $product){
+            $this->authorize('destroy', $product);
+            $product->delete();
 
+            return redirect('/products');
     }
 
 }

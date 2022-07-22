@@ -108,9 +108,12 @@
             <h3>Edit Admin Account</h3>
         </a>
        
-        <a href="home.php?logout=true" class="menu-item"> 
-         <!--      <span><i class="fa fa-power-off"></i></span>  -->
-            <h3>Log out</h3>
+        <a href="javascript:void(0)" class="menu-item"> 
+          <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <h3>Log out</h3>   
+           </form>
+           
         </a>
                               
        
