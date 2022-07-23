@@ -12,15 +12,11 @@ class AllproductController extends Controller
 {
     protected $products;
 
-    public function __construct(){
-        $this->middleware('auth');
-
-     //   $this->products=$products;
-    }
 
     public function index(Request $request){
          //$list=Product::get();
-        $list=DB::table('products')->get();
-        return view("products.items", ['list'=> $list ] ) ;
+         $list=DB::table('products')->get();
+        // return response()->json([$list], 200);
+         return $list;
     }
 }

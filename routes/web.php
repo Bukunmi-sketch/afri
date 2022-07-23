@@ -18,7 +18,7 @@ Route::post('/register', [App\Http\Controllers\RegisterController::class, 'index
 */
 
 //Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, ''])->name('logout');
-
+Route::get('/api', [App\Http\Controllers\AllproductController::class, 'index']);
 Route::get('/products', [App\Http\Controllers\productController::class, 'getproducts'])->name('products');
 
 Route::get('/create', [App\Http\Controllers\ProductController::class, 'index'])->name('create');

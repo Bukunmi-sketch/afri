@@ -46,6 +46,8 @@ class ProductController extends Controller
     public function getproducts(Request $request){
         //$list=Product::get();
        $list=DB::table('products')->get();
+       //dd($list);
+     //  return response()->json([$list]);
        return view("products.items", ['list'=> $list ] ) ;
     }
 
