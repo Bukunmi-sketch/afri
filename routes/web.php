@@ -42,3 +42,5 @@ Route::post('/customers_details', [App\Http\Controllers\ProductController::class
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+
+Route::get('/payment', [App\Http\Controllers\PaymentController::class, 'index'])->name('dashboard');
