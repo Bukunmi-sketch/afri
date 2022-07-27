@@ -8,6 +8,14 @@ class paymentController extends Controller
 {
     public function index(Request $request)
     {
-          return view('page.payment');
+         $request->name;
+         $request->price;
+      return response()->json([
+             'status'=>200
+         ]);
+
+        
+       //  return view('page.payment');
+
     }
 }
