@@ -73,7 +73,7 @@
          </div>
         -->
          <a href=" {{route('customers_details')}} " onclick="members()" class="menu-item">   
-            <h3>Customers details</h3>
+            <h3>Manage customer orders</h3>
         </a>
 
        <!--
