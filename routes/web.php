@@ -43,4 +43,4 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
-Route::POST('/api/payment', [App\Http\Controllers\PaymentController::class, 'index']);
+Route::POST('api/payment', [App\Http\Controllers\PaymentController::class, 'index']);
