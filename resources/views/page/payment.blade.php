@@ -6,7 +6,7 @@
 
     <div class="min-sub-container" style="display:block; position:relative;"> 
         <div class="spanheader">
-            <span><h4> {{ __("Add a product")}} </h4></span>             
+            <span><h4> {{ __("Make payment")}} </h4></span>             
         </div>
         
         <form action="/create" method="POST" enctype="multipart/form-data">
@@ -14,7 +14,7 @@
            @include('common.errors')
          
          <div class="inputbox-details">
-             <input type="text" id="passa" name="product_name" style="@error('product_name') border:1px solid red  @enderror" placeholder="Product name" value=" {{old("product_name")}} " autofocus >
+             <input type="text" id="passa" name="product_name" style="@error('product_name') border:1px solid red  @enderror" placeholder="selected product" value=" " autofocus >
 
              @error('product_name')
               <span class="invalid-feedback" role="alert">
@@ -24,17 +24,51 @@
          </div>
 
          <div class="inputbox-details">
-             <textarea id="passa" name="product_description"  placeholder="Product description" autofocus value=" {{ old("product_description") }} "  style="@error('product_description') border:1px solid red  @enderror"></textarea>
+            <input type="number" id="passa" name="product_price" placeholder="Product price" value="  "  autofocus style="@error('product_price') border:1px solid red  @enderror">
 
-             @error('product_description')
-              <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-              </span>
-              @enderror   
-         </div> 
+            @error('product_price')
+             <span class="invalid-feedback" role="alert">
+                 <strong>{{ $message }}</strong>
+             </span>
+             @enderror   
+        </div> 
 
          <div class="inputbox-details">
-             <input type="number" id="passa" name="product_price" placeholder="Product price" value=" {{ old("product_price")}} "  autofocus style="@error('product_price') border:1px solid red  @enderror">
+            <input type="number" id="passa" name="customers_name" placeholder="customers_name" value="  "  autofocus style="@error('product_price') border:1px solid red  @enderror">
+
+            @error('product_price')
+             <span class="invalid-feedback" role="alert">
+                 <strong>{{ $message }}</strong>
+             </span>
+             @enderror   
+        </div> 
+       
+
+        <div class="inputbox-details">
+            <input type="number" id="passa" name="email" placeholder="customers email" value="  "  autofocus style="@error('product_price') border:1px solid red  @enderror">
+
+            @error('product_price')
+             <span class="invalid-feedback" role="alert">
+                 <strong>{{ $message }}</strong>
+             </span>
+             @enderror   
+        </div> 
+
+
+        <div class="inputbox-details">
+            <input type="number" id="passa" name="product_price" placeholder="Product price" value="  "  autofocus style="@error('product_price') border:1px solid red  @enderror">
+
+            @error('product_price')
+             <span class="invalid-feedback" role="alert">
+                 <strong>{{ $message }}</strong>
+             </span>
+             @enderror   
+        </div> 
+       
+
+
+         <div class="inputbox-details">
+             <input type="number" id="passa" name="phone_no" placeholder="phone no" value=" "  autofocus style="@error('product_price') border:1px solid red  @enderror">
 
              @error('product_price')
               <span class="invalid-feedback" role="alert">
