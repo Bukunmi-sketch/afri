@@ -10,12 +10,23 @@ class paymentController extends Controller
     {
          $request->name;
          $request->price;
-      return response()->json([
+     /*    return response()->json([
              'status'=>200
-         ]);
+         ]);*/
+          return view('page.payment');
 
+    }
+
+    public function store(Request $request)
+    {
+         $request->name;
+         $request->price;
+        return response()->json([
+             'status'=>200,
+             'name'=> $request->name,
+             'price'=>  $request->price
+         ]);
         
-       //  return view('page.payment');
 
     }
 }

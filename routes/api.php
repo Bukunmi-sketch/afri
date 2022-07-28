@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [App\Http\Controllers\AllproductController::class, 'index']);
+Route::POST('/payment', [App\Http\Controllers\PaymentController::class, 'store']);
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
