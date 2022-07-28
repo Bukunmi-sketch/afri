@@ -21,12 +21,15 @@ class paymentController extends Controller
     {
          $request->name;
          $request->price;
-        return response()->json([
+
+         return redirect()->route('pay');
+    /*    return response()->json([
              'status'=>200,
              'name'=> $request->name,
              'price'=>  $request->price
          ]);
-        
+       
+         */
 
     }
 }

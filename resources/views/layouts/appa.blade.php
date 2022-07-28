@@ -30,7 +30,7 @@
     @include('layouts.nav')
     <main> 
         <div class="container">
-            @include('layouts.left')    
+         
             @yield('content')
         </div>
    </main>    

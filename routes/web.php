@@ -42,6 +42,11 @@ Route::post('/customers_details', [App\Http\Controllers\ProductController::class
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
+/*
+Route::match(['get', 'post'], '/pay', function () {
+    return view('page.payment');
+});
 
-Route::get('/payment', [App\Http\Controllers\PaymentController::class, 'index']);
+*/
+Route::match(['get', 'post'], '/pay', [App\Http\Controllers\PaymentController::class, 'index'])->name('pay');
 
