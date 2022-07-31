@@ -18,8 +18,12 @@ class paymentController extends Controller
      // return redirect()->action([App\Http\Controllers\PaymentController::class, 'index']);
      return response()->json([
              'status'=>200,
-             'name'=> $request->name,
-             'price'=>  $request->price
+             'name'=> $request->customers_name,
+             'email' => $request->customers_email,
+             'amount'=>  $request->amount,
+             'email' => $request->customers_email,
+             'address' => $request->customers_address,
+             'payment_status' => $request->payment_status
          ]);
     
     }
