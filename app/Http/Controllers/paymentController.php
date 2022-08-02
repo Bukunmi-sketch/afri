@@ -14,7 +14,7 @@ class paymentController extends Controller
 
      public function verify(Request $request)
      {
-           $transactionid= $request->transactionid;
+           $transactionid= $request->transaction_id;
         
         
      }
