@@ -12,6 +12,11 @@ class paymentController extends Controller
    
      }
 
+     public function verify(Request $request){
+        
+        
+     }
+
    
     public function store(Request $request)
     {
