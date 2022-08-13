@@ -2,51 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-
-//Route::get("/",[App\Http\Controllers\ProductController::class, 'index']);
-/*
-Route::post('/login', [App\Http\Controllers\ProductController::class, 'index'])->name('login');
-Route::post('/login', [App\Http\Controllers\ProductController::class, 'index'])->name('login');
-
-Route::get('/register', [App\Http\Controllers\Auth\RegisterController::class, 'index'])->name('register');
-Route::post('/register', [App\Http\Controllers\RegisterController::class, 'index'])->name('register');
-*/
-
-//Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, ''])->name('logout');
-
-Route::get('/products', [App\Http\Controllers\productController::class, 'getproducts'])->name('products');
-
-Route::get('/create', [App\Http\Controllers\ProductController::class, 'index'])->name('create');
-Route::post('/create', [App\Http\Controllers\ProductController::class, 'store'])->name('create');
-
-Route::get('/edit', [App\Http\Controllers\ProductController::class, 'index'])->name('edit');
-Route::post('/edit', [App\Http\Controllers\ProductController::class, 'store'])->name('edit');
-
-Route::get('/categories', [App\Http\Controllers\ProductController::class, 'index'])->name('categories');
-Route::post('/categories', [App\Http\Controllers\ProductController::class, 'store']);
-
-Route::get('/delete', [App\Http\Controllers\ProductController::class, 'index'])->name('delete');
-Route::delete('/delete/{productid}', [App\Http\Controllers\ProductController::class, 'destroy']);
-
-Route::get('/customers', [App\Http\Controllers\ProductController::class, 'index'])->name('customers');
-Route::post('/customers', [App\Http\Controllers\ProductController::class, 'store'])->name('customers');
-
-Route::get('/customers_details', [App\Http\Controllers\ProductController::class, 'index'])->name('customers_details');
-Route::post('/customers_details', [App\Http\Controllers\ProductController::class, 'store'])->name('customers_details');
-
-Auth::routes();
-
-Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
-/*
-Route::match(['get', 'post'], '/pay', function () {
-    return view('page.payment');
-});
-
-*/
-Route::match(['get', 'post'], '/pay', [App\Http\Controllers\PaymentController::class, 'index'])->name('pay');
-

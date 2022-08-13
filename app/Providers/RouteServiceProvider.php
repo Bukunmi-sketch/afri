@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Models\Product;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -18,17 +17,15 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME = '/home';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      *
      * @return void
      */
-    public function boot(){
-
-        Route::model('productid', Product::class);
-
+    public function boot()
+    {
         $this->configureRateLimiting();
 
         $this->routes(function () {
