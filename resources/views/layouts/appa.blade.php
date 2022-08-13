@@ -16,7 +16,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/left.css') }}" rel="stylesheet">
@@ -28,13 +28,13 @@
 </head>
 <body>
     @include('layouts.nav')
-    <main> 
+    <main>
         <div class="container">
-         
+
             @yield('content')
         </div>
-   </main>    
-       <!-- JavaScripts 
+   </main>
+       <!-- JavaScripts
        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
 </body>
