@@ -66,14 +66,14 @@ body{
     height:50px;
 }
 
-.profile-photo{       
-    overflow:visible;  
+.profile-photo{
+    overflow:visible;
 }
 
 img{
     width:35px;
     height:35px;
-    display: block;  
+    display: block;
     border-radius: 50%;
 }
 
@@ -136,7 +136,7 @@ nav .bottom-menu-nav{
     display: flex;
     border: 1px solid transparent;
     justify-content: space-around;
-   
+
 }
 
 .bottom-menu-nav{
@@ -208,7 +208,7 @@ main .container{
     column-gap: 2rem;
     position: relative;
     border: 1px solid transparent;
-    
+
 }
 
 .middle{
@@ -217,16 +217,16 @@ main .container{
 
 
 
-    
+
     .list-container{
-    top:0; 
+    top:0;
     width:100%;
     margin:20px 0 0  0;
     border: 1px solid green;
     display: flex;
     flex-wrap: wrap;
     }
-    
+
     .each-box{
         height:100px;
         width:300px;
@@ -241,7 +241,7 @@ main .container{
 
     .each-box i{
         font-size: 4em;
-        
+
     }
 
     .each-box .text-box{
@@ -260,33 +260,33 @@ main .container{
     width:90%;
     max-width:400px;
     display:flex;
-    flex-direction:column ; 
+    flex-direction:column ;
     border:1px solid white;
     background-color:#fff;
     padding:5px 0 50px 0;
     border-radius:10px;
-   
+
     }
-    
-    
-    
+
+
+
     .login-details {
     text-align:center;
     width:100%;
-    position:relative; 
+    position:relative;
     padding:5px 10px 0;
     border:1px solid transparent;
     margin:0 0 0 0px;
     text-align: center;
     align-items: center;
     }
-   
+
     .password-details {
     margin:0px 0  0 0px;
     border:1px solid white;
     width:100%;
     }
-   
+
 
 
 
@@ -309,7 +309,7 @@ main .container{
     }
 
 
-  
+
 
 
 /* ---------------------------MEDIA QUERY FOR SMALL LAPTOPS AND BIG TABLETS-----------------*/
@@ -324,11 +324,11 @@ main .container{
         grid-template-columns: 30vw auto 30vw;
         gap: 1rem;
     }
-   
-   
-   
-   
-   
+
+
+
+
+
     .left{
         width:100%;
         z-index: 5;
@@ -348,7 +348,7 @@ main .container{
 
     .left .btn{
         display: none;
-        
+
     }
 
 }
@@ -368,7 +368,7 @@ main .container{
         position: relative;
         top: 3.8em;
     }
-    
+
 
     main .container{
         grid-template-columns:20vw auto 40vw;
@@ -392,8 +392,8 @@ main .container{
         display: none;
     }
 
-    
-    
+
+
 
 
 }
@@ -405,9 +405,9 @@ main .container{
 
     nav .bottom-menu-nav{
         display:none;
-       
+
         justify-content: space-around;
-       
+
     }
     .bar{
         display: block;
@@ -420,11 +420,11 @@ main .container{
     main{
         position: relative;
     }
-    
+
 
     main .container{
         grid-template-columns: 0 auto 0;
-      
+
     }
 
     main .container .middle{
@@ -433,7 +433,7 @@ main .container{
     }
 
     main .container .left{
-        grid-column:0/4 ;
+      /*  grid-column:0/4 ;  */
         left: 0;
         width:0;
         overflow-y:scroll;
@@ -443,10 +443,10 @@ main .container{
     }
     main .container .left{
          position:fixed;
-        top:0; 
-        
+        top:0;
+
     }
-    
+
     main .container .left .remove-bar{
         display:block;
         margin:20px 0 0 -50px;
@@ -459,11 +459,11 @@ main .container{
 
     .left .sidebar .menu-item{
         padding:8px;
-        border: 1px solid transparent;  
-        padding:5.5px; 
-    }   
+        border: 1px solid transparent;
+        padding:5.5px;
+    }
 
-    
+
 
     main .container .left .profile{
         display:block;
@@ -490,7 +490,7 @@ main .container{
     .middle .feeds {
         margin-top:280px;
       }
-   
+
 
 
 }
