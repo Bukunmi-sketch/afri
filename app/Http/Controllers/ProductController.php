@@ -28,7 +28,7 @@ class ProductController extends Controller
             "product_price"=>"required|integer",
             "category"=>"required|string",
             "product_available"=>"required|string",
-        ]);  
+        ]);
 
         //Product::create([]);
         $request->user()->products()->create([
@@ -38,7 +38,7 @@ class ProductController extends Controller
             'category'=>$request->category,
             'available'=>$request->product_available,
         ]);
-        
+
         //->back()->with('status','created a product succesfully');
         return redirect()->route('products');
     }
