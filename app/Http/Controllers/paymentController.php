@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class paymentController extends Controller
@@ -9,12 +10,13 @@ class paymentController extends Controller
      public function index(Request $request)
      {
            return view('page.payment');
-   
+
      }
 
+      /*
      public function verify(Request $request)
      {
-           $transactionid= $request->transaction_id;
+         $transactionid= $request->transaction_id;
 
            $flw = new \Flutterwave\Rave(getenv('FLW_SECRET_KEY')); // Set `PUBLIC_KEY` as an environment variable
            $transactions = new \Flutterwave\Transactions();
@@ -27,12 +29,11 @@ class paymentController extends Controller
            } else {
                // Inform the customer their payment was unsuccessful
            }
-        
-        
+
      }
 
      public function confirmpay(){
-        
+
       $curl = curl_init();
 
 			curl_setopt_array($curl, array(
@@ -62,27 +63,34 @@ class paymentController extends Controller
 
      }
 
-   
+      */
+
+
     public function store(Request $request)
     {
-         $request->name;
-         $request->price;
-       $this->namee=$request->name;
-     //    return redirect()->route('pay');
-    // redirect('/pay')->with('name', $request->name );
-     // return redirect()->action([App\Http\Controllers\PaymentController::class, 'index']);
      return response()->json([
              'status'=>200,
+             "cartItem" => $request->product,
              'name'=> $request->customers_name,
              'email' => $request->customers_email,
              'amount'=>  $request->amount,
              'email' => $request->customers_email,
              'address' => $request->customers_address,
-             'payment_status' => $request->payment_status
+             'payment_status' => $request->payment_status,
+             'additional_info' => $request->moreInfo,
+             "userid" => "1233"
          ]);
-    
+
+        //insert the data to the database
+        //if successfully inserted return status== 200 & set payment status to pending
+        //if status == 200 in reactjs direct to payment link with flutterwave or buynow paylater  (show them their payment id and transaction id and other details now they can pay in flutterwave)
+        //if flutterwave does it things
+        //verify their payment
+       //show them successfully payment link
+
+
     }
 
-   
-   
+
+
 }
