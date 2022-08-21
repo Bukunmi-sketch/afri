@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Product;
+use App\Models\Order;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
@@ -14,9 +14,8 @@ class OrderController extends Controller
     }
 
     public function index(Request $request){
-        //$list=Product::get();
-       $list=DB::table('orders')->get();
-
-       return view("products.items", ['list'=> $list ] ) ;
+        //$list=Order::get();
+       $order=DB::table('orders')->get();
+       return view("products.order", ['order'=> $order ] ) ;
     }
 }
