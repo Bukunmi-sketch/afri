@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class paymentController extends Controller
@@ -68,19 +69,24 @@ class paymentController extends Controller
 
     public function store(Request $request)
     {
-     return response()->json([
-             'status'=>200,
-             "cartItem" => $request->product,
-             'name'=> $request->customers_name,
+
+     //   return response()->json([
+         Order::create([
+             "cart_items" => $request->product,
+             'customers_name'=> $request->customers_name,
              'email' => $request->customers_email,
              'amount'=>  $request->amount,
-             'email' => $request->customers_email,
-             'address' => $request->customers_address,
+             "phone_no" => 56999,
+             "state" =>"ibadan",
+             'amount'=>  $request->amount,
+             'customers_address' => $request->customers_address,
              'payment_status' => $request->payment_status,
              'additional_info' => $request->moreInfo,
-             "userid" => "1233"
+             "userid" => 1234
          ]);
 
+
+         return response()->json(["status"=>200, "userid"=>1234 ]);
         //insert the data to the database
         //if successfully inserted return status== 200 & set payment status to pending
         //if status == 200 in reactjs direct to payment link with flutterwave or buynow paylater  (show them their payment id and transaction id and other details now they can pay in flutterwave)
