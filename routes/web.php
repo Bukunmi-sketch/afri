@@ -35,8 +35,8 @@ Route::post('/categories', [App\Http\Controllers\ProductController::class, 'stor
 Route::get('/delete', [App\Http\Controllers\ProductController::class, 'index'])->name('delete');
 Route::delete('/delete/{productid}', [App\Http\Controllers\ProductController::class, 'destroy']);
 
-Route::get('/customers', [App\Http\Controllers\ProductController::class, 'index'])->name('customers');
-Route::post('/customers', [App\Http\Controllers\ProductController::class, 'store'])->name('customers');
+Route::get('/orders', [App\Http\Controllers\ProductController::class, 'index'])->name('orders');
+Route::post('/orders', [App\Http\Controllers\ProductController::class, 'store'])->name('orders');
 
 Route::get('/customers_details', [App\Http\Controllers\ProductController::class, 'index'])->name('customers_details');
 Route::post('/customers_details', [App\Http\Controllers\ProductController::class, 'store'])->name('customers_details');
