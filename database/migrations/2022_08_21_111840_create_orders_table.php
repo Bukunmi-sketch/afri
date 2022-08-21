@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text("customers_address");
             $table->string('state');
             $table->string("cart_items");
-            $table->integer("phone_no");
+            $table->string("phone_no");
             $table->text('additional_info');
             $table->string("payment_status");
             $table->integer("amount");
