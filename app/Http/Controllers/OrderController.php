@@ -18,4 +18,11 @@ class OrderController extends Controller
        $order=DB::table('orders')->get();
        return view("products.order", ['order'=> $order ] ) ;
     }
+
+    public function destroy(Request $request, Order $order){
+        $this->authorize('destroy', $order);
+        $order->delete();
+
+        return redirect('/orders');
+}
 }

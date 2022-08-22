@@ -8,23 +8,23 @@
       <div class="follow-unfollow">
          <button type="submit" class="justbtn" ><a href={{ route('create') }}> Available Orders</a> </button>
       </div>
-        @if (count($list) > 0 )
+        @if (count($order) > 0 )
 
               <div class="userbox">
                <!---------------------each users ----------------->
                <div class="userContainer">
-                  @foreach ($list as $item)
+                  @foreach ($order as $customerOrders)
                  <div class="each-user">
-                           <div class="productname"> {{$item->product_name }} </div>
-                           <div id="followers-count" class="followers-count {{$item->id}} " > 2 sales </div>
-                           <div id="followers-count"> {{$item->category}} </div>
-                           <a href="#"> <div class="profileview">view details</div></a>
-                           <a href="#"> <div class="profileview"> {{ $item->available}}</div></a>
+                           <div class="productname"> {{$customerOrders->customers_name }} </div>
+                           <div id="followers-count" class="followers-count {{$customerOrders->userid}} " >  {{$customerOrders->userid}}</div>
+                           <div id="followers-count"> {{$customerOrders->email}} </div>
+                           <a href="#"> <div class="profileview">{{$customerOrders->cart_items}}</div></a>
+                           <a href="#"> <div class="profileview"> {{ $customerOrders->payment_status}}</div></a>
 
-                      <div id="followers-count">created: {{$item->created_at}} </div>
+                      <div id="followers-count">created: {{$customerOrders->amount}} </div>
 
                       <div class="follow-unfollow">
-                        <form action="/delete/{{ $item->id }}" method="POST">
+                        <form action="/deleteOrders/{{ $customerOrders->id }}" method="POST">
                            {{ csrf_field() }}
                            {{ method_field('DELETE')}}
                            <button type="submit" class="deletebtn" > Delete </button>
