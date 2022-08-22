@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('userid')->unsigned()->index();
+            $table->integer('order_id')->unsigned()->index();
             $table->string('customers_name');
             $table->string('email');
             $table->text("customers_address");
@@ -24,6 +24,9 @@ return new class extends Migration
             $table->string("phone_no");
             $table->text('additional_info');
             $table->string("payment_status");
+            $table->string("order_status");
+            $table->string("payment_type");
+            $table->string("transaction_ref");
             $table->integer("amount");
             $table->timestamps();
         });

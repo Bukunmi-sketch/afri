@@ -72,7 +72,7 @@ class paymentController extends Controller
 
      //   return response()->json([
          Order::create([
-            "userid" => $request->userid,
+            "order_id" => $request->orderid,
             'amount'=>  $request->amount,
             'customers_name'=> $request->customers_name,
             'email' => $request->customers_email,
@@ -82,10 +82,13 @@ class paymentController extends Controller
             "phone_no" =>  $request->phone,
             'additional_info' => $request->moreInfo,
             'payment_status' => $request->payment_status,
+            'order_status' => $request->order_status,
+            'payment_type' => $request->payment_type,
+            'transaction_ref' => ""
          ]);
 
 
-         return response()->json(["status"=>200, "userid"=>$request->userid]);
+         return response()->json(["status"=>200, "userid"=>$request->orderid]);
         //insert the data to the database
         //if successfully inserted return status== 200 & set payment status to pending
         //if status == 200 in reactjs direct to payment link with flutterwave or buynow paylater  (show them their payment id and transaction id and other details now they can pay in flutterwave)
