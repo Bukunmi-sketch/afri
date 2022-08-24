@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\AllproductController::class, 'index']);
 //Route::match(['get', 'post'], '/payment', [App\Http\Controllers\PaymentController::class, 'store']);
 Route::post('/payment', [App\Http\Controllers\PaymentController::class, 'store']);
+Route::post('/orderslist', [App\Http\Controllers\ViewOrderController::class, 'allOrders']);
+Route::get('/orderslist/{userdetails}', [App\Http\Controllers\ViewOrderController::class, 'userOrder']);
 Route::post('/confirmpayment', [App\Http\Controllers\PaymentController::class, 'verify']);
 
 

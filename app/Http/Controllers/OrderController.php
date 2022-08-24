@@ -8,10 +8,12 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-     public function __construct()
+   public function __construct()
     {
         $this->middleware('auth');
     }
+
+    
 
     public function index(Request $request){
         //$list=Order::get();
@@ -19,6 +21,7 @@ class OrderController extends Controller
        return view("products.order", ['order'=> $order ] ) ;
     }
 
+    
     public function destroy(Request $request, Order $order){
         $this->authorize('destroy', $order);
         $order->delete();

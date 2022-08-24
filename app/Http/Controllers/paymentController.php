@@ -33,12 +33,16 @@ class paymentController extends Controller
 
      }
 
-     public function confirmpay(){
+     */
+
+     public function verify(Request $request){
+
+         $transactionid= $request->transaction_id;
 
       $curl = curl_init();
 
 			curl_setopt_array($curl, array(
-			CURLOPT_URL => "https://api.flutterwave.com/v3/transactions/{$txid}/verify", // Pass transaction ID for validation
+			CURLOPT_URL => "https://api.flutterwave.com/v3/transactions/{$transactionid}/verify", // Pass transaction ID for validation
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_ENCODING => "",
 			CURLOPT_MAXREDIRS => 10,
@@ -61,18 +65,20 @@ class paymentController extends Controller
 			// echo '</pre>';
 
 			$res = json_decode($response);
+            return $res;
 
      }
 
-      */
+      
 
 
     public function store(Request $request)
     {
 
+        $request->orderid=2+rand(0,time());
      //   return response()->json([
          Order::create([
-            "order_id" => $request->orderid,
+            "order_id" =>$request->orderid,
             'amount'=>  $request->amount,
             'customers_name'=> $request->customers_name,
             'email' => $request->customers_email,
@@ -83,12 +89,12 @@ class paymentController extends Controller
             'additional_info' => $request->moreInfo,
             'payment_status' => $request->payment_status,
             'order_status' => $request->order_status,
-            'payment_type' => $request->payment_type,
+            'payment_type' => "",
             'transaction_ref' => ""
          ]);
 
 
-         return response()->json(["status"=>200, "userid"=>$request->orderid]);
+         return response()->json(["status"=>200, "orderid"=>$request->orderid]);
         //insert the data to the database
         //if successfully inserted return status== 200 & set payment status to pending
         //if status == 200 in reactjs direct to payment link with flutterwave or buynow paylater  (show them their payment id and transaction id and other details now they can pay in flutterwave)
@@ -99,6 +105,9 @@ class paymentController extends Controller
 
     }
 
+     public function test(Request $request){
+           return response()->json(["status"=>200, "orderid"=>$request->orderid]);
+     }
 
 
 }

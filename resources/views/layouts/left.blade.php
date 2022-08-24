@@ -53,35 +53,37 @@
          </div>
         -->
 
-        <a href="{{ route("edit")}}" class="menu-item" id="message-notifications">
-            <h3>Edit Products</h3>
+        <a href="{{ route("orders")}}" class="menu-item" id="message-notifications">
+            <h3>All orders</h3>
         </a>
 
 
-        <a href=" {{ route('delete')}} " class="menu-item">
-            <h3>Delete Products</h3>
-        </a>
-
-        <a href=" {{route("orders")}} " onclick="attend()" class="menu-item">
-            <h3>Orders</h3>
-        </a>
-
-           <!--
-        <div id="attendance"  class="dropdown-attendance">
-           <a href="attendance_add.php" class="menu-item"> <h3>Add attendance</h3> </a>
-           <a href="attendance_history.php" class="menu-item"> <h3>Attendance history</h3> </a>
-         </div>
-        -->
-         <a href=" {{route('customers_details')}} " onclick="members()" class="menu-item">
+        <a href="javascript:void(0)" class="menu-item" onclick="attend()">
             <h3>Manage customer orders</h3>
         </a>
 
-       <!--
-        <div id="members"  class="dropdown-members">
-           <a href="members_add.php" class="menu-item"> <h3>Add members</h3> </a>
-           <a href="members_history.php" class="menu-item"> <h3>Members list</h3> </a>
+
+        <div id="attendance"  class="dropdown-attendance">
+           <a href="attendance_add.php" class="menu-item"> <h3>Unpaid Orders</h3> </a>
+           <a href="attendance_history.php" class="menu-item"> <h3>Paid Orders</h3> </a>
          </div>
-           -->
+
+
+        <a href=" / "  class="menu-item">
+            <h3>Orders</h3>
+        </a>
+
+
+         <a href="javascript:void(0)" onclick="members()" class="menu-item">
+            <h3>Manage Complete Orders</h3>
+        </a>
+
+
+        <div id="members"  class="dropdown-members">
+           <a href="members_add.php" class="menu-item"> <h3>Undelivered Orders</h3> </a>
+           <a href="members_history.php" class="menu-item"> <h3>Delivered Orders</h3> </a>
+         </div>
+
          <a href="javascript:void(0)" onclick="exams()" class="menu-item">
             <h3>Contact Customers</h3>
         </a>
