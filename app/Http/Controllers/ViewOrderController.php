@@ -19,7 +19,7 @@ class ViewOrderController extends Controller
     public function userOrder($orderid){
         //$list=Order::get();
        $order=DB::table('orders')->where('order_id',$orderid)->get();
-     //  return response()->json($order);
-       return json_decode($order);
+       return response()->json($order);
+      // return json_encode($order);
     }
 }

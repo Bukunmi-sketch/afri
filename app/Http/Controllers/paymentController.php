@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class paymentController extends Controller
 {
@@ -37,8 +39,8 @@ class paymentController extends Controller
 
      public function verify(Request $request){
 
-         $transactionid= $request->transaction_id;
-
+         $transactionid= $request->transactionid;
+         
       $curl = curl_init();
 
 			curl_setopt_array($curl, array(
@@ -52,7 +54,7 @@ class paymentController extends Controller
 			CURLOPT_CUSTOMREQUEST => "GET",
 			CURLOPT_HTTPHEADER => array(
 			"Content-Type: application/json",
-			'Authorization: Bearer {SECRETE_KEY}', //Get your Secrete key from flutterwave dashboard.
+			'Authorization: Bearer FLWSECK_TEST-cbeca5011347c8b6d48ddb0f74bb7212-X', //Get your Secrete key from flutterwave dashboard.
 			),
 			));
 
@@ -66,6 +68,7 @@ class paymentController extends Controller
 
 			$res = json_decode($response);
             return $res;
+         
 
      }
 
@@ -100,8 +103,32 @@ class paymentController extends Controller
         //if status == 200 in reactjs direct to payment link with flutterwave or buynow paylater  (show them their payment id and transaction id and other details now they can pay in flutterwave)
         //if flutterwave does it things
         //verify their payment
+         //update their record as paid and complete
        //show them successfully payment link
 
+
+    }
+
+    public function update(Request $request){
+
+         $payment_status= $request->payment_status; 
+         $order_status= $request->order_status;
+         $payment_type= $request->payment_type;
+         $transaction_ref= $request->transaction_ref;
+         $orderid= $request->order_id;
+
+         DB::table("orders")->where('order_id', $orderid)->update([
+
+                                                                        "payment_status"=>$payment_status,
+                                                                        "order_status"=>$order_status,
+                                                                        "payment_type" => $payment_type,
+                                                                        "transaction_ref" => $transaction_ref
+                                                                    ]);
+
+          //$list=Order::get();
+       $orderdetails=DB::table('orders')->where('order_id',$orderid)->get();
+       return response()->json($orderdetails);
+       //return json_decode($order);
 
     }
 

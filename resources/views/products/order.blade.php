@@ -19,7 +19,7 @@
                            <div id="followers-count" class="followers-count {{$customerOrders->order_id}} " >  {{$customerOrders->order_id}}</div>
                            <div id="followers-count"> {{$customerOrders->email}} </div>
                            <a href="#"> <div class="profileview">{{$customerOrders->cart_items}}</div></a>
-                           <a href="#"> <div class="profileview"> {{ $customerOrders->payment_status}}</div></a>
+                           <a href="#"> <div class="profileview" style="font-size:1.3em"> {{ $customerOrders->payment_status}}</div></a>
 
                       <div id="followers-count">created: {{$customerOrders->amount}} </div>
 

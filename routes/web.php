@@ -24,10 +24,10 @@ Route::get('/get', [App\Http\Controllers\AllproductController::class, 'index']);
 Route::get('/products', [App\Http\Controllers\productController::class, 'getproducts'])->name('products');
 
 Route::get('/create', [App\Http\Controllers\ProductController::class, 'index'])->name('create');
-Route::post('/create', [App\Http\Controllers\ProductController::class, 'store'])->name('create');
+Route::post('/create', [App\Http\Controllers\ProductController::class, 'store']);
 
 Route::get('/edit', [App\Http\Controllers\ProductController::class, 'index'])->name('edit');
-Route::post('/edit', [App\Http\Controllers\ProductController::class, 'store'])->name('edit');
+Route::post('/edit', [App\Http\Controllers\ProductController::class, 'store']);
 
 Route::get('/categories', [App\Http\Controllers\ProductController::class, 'index'])->name('categories');
 Route::post('/categories', [App\Http\Controllers\ProductController::class, 'store']);
@@ -36,7 +36,7 @@ Route::get('/delete', [App\Http\Controllers\ProductController::class, 'index'])-
 Route::delete('/delete/{productid}', [App\Http\Controllers\ProductController::class, 'destroy']);
 
 Route::get('/orders', [App\Http\Controllers\OrderController::class, 'index'])->name('orders');
-Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store'])->name('orders');
+Route::post('/orders', [App\Http\Controllers\OrderController::class, 'store']);
 Route::delete('/deleteOrders/{orderid}', [App\Http\Controllers\ProductController::class, 'destroy']);
 Route::get('/orderslist', [App\Http\Controllers\ViewOrderController::class, 'allOrders']);
 Route::get('/orderslist/{userdetails}', [App\Http\Controllers\ViewOrderController::class, 'userOrder']);
@@ -44,7 +44,7 @@ Route::get('/orderslist/{userdetails}', [App\Http\Controllers\ViewOrderControlle
 Route::get('/test', [App\Http\Controllers\PaymentController::class, 'test']);
 
 Route::get('/customers_details', [App\Http\Controllers\ProductController::class, 'index'])->name('customers_details');
-Route::post('/customers_details', [App\Http\Controllers\ProductController::class, 'store'])->name('customers_details');
+Route::post('/customers_details', [App\Http\Controllers\ProductController::class, 'store']);
 
 Auth::routes();
 

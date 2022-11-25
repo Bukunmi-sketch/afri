@@ -21,6 +21,8 @@ Route::post('/orderslist', [App\Http\Controllers\ViewOrderController::class, 'al
 Route::get('/orderslist/{userdetails}', [App\Http\Controllers\ViewOrderController::class, 'userOrder']);
 Route::post('/confirmpayment', [App\Http\Controllers\PaymentController::class, 'verify']);
 
+Route::post('/update', [App\Http\Controllers\PaymentController::class, 'update']);
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
